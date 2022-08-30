@@ -27,15 +27,15 @@ def cadastro():
     arquivoJavi = open("javi.txt", "a")
     arquivoNao = open("naovi.txt", "a")
     arquivoTalvez = open("talvez.txt", "a")
+    jaVi = []
+    talvez = []
+    semInteresse = []
+    tmpp = []
+    temMovie = []
 
     while (True):
         # randon a number
         ax = random.randrange(1, 250)
-        jaVi = []
-        talvez = []
-        semInteresse = []
-        tmpp = []
-        temMovie = []
 
         for movie in listMovies:
             aws = ''
@@ -97,7 +97,7 @@ def cadastro():
             semInteresse.append(temMovie)
             tmpNao = str(temMovie)
             arquivoNao.write(str(tmpNao + ' , '))
-        # os.system('clear')
+        os.system('clear')
 
 
 def telaPrincipal():
@@ -161,4 +161,3 @@ while(opc != '4'):
         arquivoJavi.close()
         arquivoTalvez.close()
         arquivoNao.close()
-
